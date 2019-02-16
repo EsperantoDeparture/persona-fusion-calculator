@@ -9,6 +9,11 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  color: darken($color: #3f51b5, $amount: 20%);
+  text-align: center;
+}
+
 // CUSTOM SCROLLBARS
 /* width */
 ::-webkit-scrollbar {

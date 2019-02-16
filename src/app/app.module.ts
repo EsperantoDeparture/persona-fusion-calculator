@@ -17,7 +17,8 @@ import {
   MatInputModule,
   MatTableModule,
   MatPaginatorModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 } from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -49,7 +50,8 @@ import { VersionSelectorComponent } from './version-selector/version-selector.co
     MatTableModule,
     MatPaginatorModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
