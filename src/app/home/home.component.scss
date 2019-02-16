@@ -1,32 +1,38 @@
 table {
-    width: 100%;
-    td {
-        button {
-            margin: auto;
-            display: block;
-        }
+  width: 100%;
+  td {
+    button {
+      margin: auto;
+      display: block;
     }
+  }
 }
 
 .table {
-    border-collapse: collapse;
-    td,
-    th {
-        padding: 0.75rem;
-        vertical-align: top;
-        border-top: 1px solid #dee2e6;
-        button {
-            display: inline;
-        }
+  border-collapse: collapse;
+  td,
+  th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    button {
+      display: inline;
     }
+  }
 
-    th {
-        text-align: left;
-    }
+  th {
+    text-align: left;
+  }
 
-    .persona:hover {
-        background-color: darken($color: #3f51b5, $amount: 20%);
-        color: white;
-        cursor: pointer;
-    }
+  .persona:hover {
+    background-color: darken($color: #3f51b5, $amount: 20%);
+    color: white;
+    cursor: pointer;
+  }
+}
+form {
+  padding: 5px;
+}
+mat-form-field {
+  width: 100%;
 }

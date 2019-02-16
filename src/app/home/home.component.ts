@@ -29,10 +29,15 @@ import {
 })
 export class HomeComponent implements OnInit {
   personae: Persona[] = personae;
+  name = '';
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  filter() {
+    this.personae = personae.filter(
+      persona =>
+        persona.name.toLowerCase().indexOf(this.name.toLowerCase()) !== -1
+    );
   }
-
 }
