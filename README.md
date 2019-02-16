@@ -1,7 +1,11 @@
 # Persona fusion calculator
 
 This project was based on [arantius' persona fusion calculator](https://github.com/arantius/persona-fusion-calculator). I was
-bored and wrote this with Angular 7. In this new implementation, you can filter the recipes by one or more of its ingredients.
+bored and wrote this with [Angular 7](https://angular.io/). In this new implementation, you can filter the recipes by one or more of its ingredients.
+
+To run the development server or build for production, you need the Angular cli (This project used version 7.2.4).
+Install it with npm:
+npm install -g @angular/cli@7.2.4
 
 ## Development server
 
