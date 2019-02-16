@@ -1,4 +1,42 @@
 <h1 @fadeInOut>Showing recipes for {{ persona.name }}</h1>
+
+<form>
+  <mat-form-field class="chip-list">
+    <mat-chip-list #chipList>
+      <mat-chip
+        *ngFor="let persona of recipeFilter"
+        selectable="selectable"
+        removable="true"
+        (removed)="remove(persona)"
+      >
+        {{ persona.name }}
+        <mat-icon matChipRemove svgIcon="close"></mat-icon>
+      </mat-chip>
+      <input
+        placeholder="Filter by ingredients"
+        #personaInput
+        [formControl]="recipeCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        matChipInputAddOnBlur="true"
+        (matChipInputTokenEnd)="add($event)"
+      />
+    </mat-chip-list>
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)="selected($event)"
+    >
+      <mat-option
+        *ngFor="let persona of (filteredPersonae | async)"
+        [value]="persona.name"
+      >
+        {{ persona.name }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
 <table @fadeInOut mat-table [dataSource]="dataSource">
   <!-- Cost column -->
   <ng-container matColumnDef="cost">

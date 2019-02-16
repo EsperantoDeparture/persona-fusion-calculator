@@ -1,9 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from '../models/persona.model';
 import { Recipe } from '../models/recipe.model';
 import { Combo } from '../models/combo.model';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import {
+  MatTableDataSource,
+  MatPaginator,
+  MatAutocomplete,
+  MatChipInputEvent,
+  MatAutocompleteSelectedEvent
+} from '@angular/material';
 import { DataService } from '../data/data.service';
 import {
   animate,
@@ -12,6 +18,10 @@ import {
   transition,
   trigger
 } from '@angular/animations';
+import { Observable } from 'rxjs';
+import { FormControl } from '@angular/forms';
+import { map, startWith } from 'rxjs/operators';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-recipes',
@@ -50,9 +60,28 @@ export class RecipesComponent implements OnInit {
   displayedColumns = ['cost', 'personae'];
 
   dataSource: MatTableDataSource<Recipe>;
+
+  recipeFilter: Persona[] = [];
+  filteredPersonae: Observable<Persona[]>;
+  recipeCtrl = new FormControl();
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+
+  @ViewChild('personaInput') personaInput: ElementRef<HTMLInputElement>;
+  @ViewChild('auto') matAutocomplete: MatAutocomplete;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataService: DataService) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private dataService: DataService
+  ) {
+    this.filteredPersonae = this.recipeCtrl.valueChanges.pipe(
+      startWith(null),
+      map((persona: string | null) =>
+        persona ? this._filter(persona) : this.personae.slice()
+      )
+    );
     this.recipes = [];
     for (const persona of this.personae) {
       if (!this.personaeByArcana[persona.arcana]) {
@@ -336,5 +365,58 @@ export class RecipesComponent implements OnInit {
         persona: persona
       }
     });
+  }
+
+  add(event: MatChipInputEvent): void {
+    if (!this.matAutocomplete.isOpen) {
+      const input = event.input;
+      const value = event.value;
+
+      if ((value || '').trim()) {
+        this.recipeFilter.push(
+          this.personae.find(persona => persona.name === value.trim())
+        );
+      }
+
+      if (input) {
+        input.value = '';
+      }
+
+      this.recipeCtrl.setValue(null);
+      this.dataSource.data = this.recipes.filter(recipe =>
+        this.recipeFilter.every(
+          ingredient => recipe.personae.indexOf(ingredient) !== -1
+        )
+      );
+    }
+  }
+
+  remove(persona: Persona): void {
+    const index = this.recipeFilter.indexOf(persona);
+
+    if (index >= 0) {
+      this.recipeFilter.splice(index, 1);
+      this.dataSource.data = this.recipes.filter(recipe =>
+        this.recipeFilter.every(
+          ingredient => recipe.personae.indexOf(ingredient) !== -1
+        )
+      );
+    }
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.recipeFilter.push(
+      this.personae.find(persona => persona.name === event.option.viewValue)
+    );
+    this.personaInput.nativeElement.value = '';
+    this.recipeCtrl.setValue(null);
+  }
+
+  private _filter(value: string): Persona[] {
+    const filterValue = value.toLowerCase();
+
+    return this.personae.filter(
+      persona => persona.name.toLowerCase().indexOf(filterValue) === 0
+    );
   }
 }
