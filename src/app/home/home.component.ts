@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { personae } from '../data/persona4-golden';
 import { Persona } from '../models/persona.model';
 import {
@@ -8,6 +8,7 @@ import {
   transition,
   trigger
 } from '@angular/animations';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -28,16 +29,21 @@ import {
   ]
 })
 export class HomeComponent implements OnInit {
-  personae: Persona[] = personae;
+  dataSource = new MatTableDataSource<Persona>(personae);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  displayedColumns = ['level', 'name', 'arcana'];
   name = '';
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
-  filter() {
-    this.personae = personae.filter(
-      persona =>
-        persona.name.toLowerCase().indexOf(this.name.toLowerCase()) !== -1
-    );
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }

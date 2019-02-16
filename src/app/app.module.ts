@@ -63,5 +63,9 @@ export class AppModule {
       'navigate_next',
       sanitizer.bypassSecurityTrustResourceUrl('assets/navigate_next.svg')
     );
+    iconRegistry.addSvgIcon(
+      'close',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/close.svg')
+    );
   }
 }
