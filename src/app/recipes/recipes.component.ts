@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   personae,
   arcana2Combos,
@@ -31,7 +31,7 @@ export class RecipesComponent implements OnInit {
   arcana3Combos: Combo[] = arcana3Combos;
   specialCombos: Combo[] = specialCombos;
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     for (const persona of this.personae) {
       if (!this.personaeByArcana[persona.arcana]) {
         this.personaeByArcana[persona.arcana] = [];
@@ -47,6 +47,9 @@ export class RecipesComponent implements OnInit {
       lastArcana = persona.arcana;
       this.arcanaRank[persona.arcana] = rank++;
     }
+  }
+
+  ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.persona = this.personae.find(
         persona => persona.name === params['persona']
@@ -63,8 +66,6 @@ export class RecipesComponent implements OnInit {
       });
     });
   }
-
-  ngOnInit() {}
 
   getRecipes() {
     // Special combos
@@ -302,5 +303,14 @@ export class RecipesComponent implements OnInit {
         }
       }
     }
+  }
+
+  go(persona: string) {
+    this.recipes = [];
+    this.router.navigate(['/recipes'], {
+      queryParams: {
+        persona: persona
+      }
+    });
   }
 }
