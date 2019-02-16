@@ -3,7 +3,7 @@
 //   http://www.gamefaqs.com/ps2/945498-shin-megami-tensei-persona-4/faqs/54981
 //   http://db.gamefaqs.com//portable/vita//file/persona_4_golden_fusion.png
 
-const personae = [
+export const personae = [
   { arcana: 'Fool', level: 1, name: 'Izanagi' },
   { arcana: 'Fool', level: 7, name: 'Yomotsu-Shikome' },
   { arcana: 'Fool', level: 13, name: 'Obariyon' },
@@ -223,7 +223,7 @@ const personae = [
   }
 ];
 
-const arcana2Combos = [
+export const arcana2Combos = [
   { source: ['Fool', 'Fool'], result: 'Fool' },
   { source: ['Fool', 'Magician'], result: 'Temperance' },
   { source: ['Fool', 'Priestess'], result: 'Death' },
@@ -493,7 +493,7 @@ const arcana2Combos = [
   { source: ['Aeon', 'Aeon'], result: 'Aeon' }
 ];
 
-const arcana3Combos = [
+export const arcana3Combos = [
   { source: ['Magician', 'Fool'], result: 'Fortune' },
   { source: ['Priestess', 'Fool'], result: 'Lovers' },
   { source: ['Priestess', 'Magician'], result: 'Fortune' },
@@ -749,7 +749,7 @@ const arcana3Combos = [
   { source: ['Aeon', 'Jester'], result: 'Judgement' }
 ];
 
-const specialCombos = [
+export const specialCombos = [
   { result: 'Izanagi', sources: ['Yomotsu-Shikome', 'Obariyon'] },
   {
     result: 'Black Frost',
