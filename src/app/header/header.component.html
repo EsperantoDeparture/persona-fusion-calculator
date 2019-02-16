@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    mat-raised-button
+    routerLink="/home"
+    color="accent"
+  >
+    <mat-icon svgIcon="home"></mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    mat-raised-button
+    (click)="location.back()"
+  >
+    <mat-icon svgIcon="nabigate_before"></mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    mat-raised-button
+    (click)="location.forward()"
+  >
+    <mat-icon svgIcon="nabigate_next"></mat-icon>
+  </button>
+</mat-toolbar>
