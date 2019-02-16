@@ -360,6 +360,7 @@ export class RecipesComponent implements OnInit {
   }
 
   go(persona: string) {
+    this.recipeFilter = [];
     this.router.navigate(['/recipes'], {
       queryParams: {
         persona: persona
