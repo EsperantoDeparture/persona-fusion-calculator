@@ -1,0 +1,8 @@
+<h1>Select a game version</h1>
+<mat-list>
+  <mat-list-item *ngFor="let release of dataService.releases"
+    ><button mat-button (click)="dataService.selectRelease(release)">
+      {{ release }}
+    </button></mat-list-item
+  >
+</mat-list>

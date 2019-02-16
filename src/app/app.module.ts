@@ -16,11 +16,13 @@ import {
   MatDividerModule,
   MatInputModule,
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatListModule
 } from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VersionSelectorComponent } from './version-selector/version-selector.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     NotFoundComponent,
-    RecipesComponent
+    RecipesComponent,
+    VersionSelectorComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatDividerModule,
     MatInputModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

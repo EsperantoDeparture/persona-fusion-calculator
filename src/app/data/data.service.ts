@@ -30,6 +30,7 @@ import {
   specialCombos as specialCombos5
 } from '../data/persona5';
 import { StorageService } from '../storage/storage.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +44,7 @@ export class DataService {
     'Persona 5'
   ];
   currentRelease: string;
-  constructor(private storageService: StorageService) {
+  constructor(private storageService: StorageService, private router: Router) {
     this.currentRelease = this.currentRelease
       ? this.currentRelease
       : this.storageService.get('current_release');
@@ -52,6 +53,7 @@ export class DataService {
   selectRelease(release: string) {
     this.currentRelease = this.releases.find(r => r === release);
     this.storageService.save('current_release', this.currentRelease);
+    this.router.navigate(['/personae']);
   }
 
   getPersonae() {
