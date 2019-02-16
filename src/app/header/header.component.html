@@ -1,11 +1,27 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button mat-raised-button routerLink="/" color="accent">
+  <button
+    mat-icon-button
+    mat-raised-button
+    routerLink="/"
+    color="accent"
+    matTooltip="Personae list"
+  >
     <mat-icon svgIcon="home"></mat-icon>
   </button>
-  <button mat-icon-button mat-raised-button (click)="location.back()">
+  <button
+    mat-icon-button
+    mat-raised-button
+    (click)="location.back()"
+    matTooltip="Previous page"
+  >
     <mat-icon svgIcon="navigate_before"></mat-icon>
   </button>
-  <button mat-icon-button mat-raised-button (click)="location.forward()">
+  <button
+    mat-icon-button
+    mat-raised-button
+    (click)="location.forward()"
+    matTooltip="Next page"
+  >
     <mat-icon svgIcon="navigate_next"></mat-icon>
   </button>
 </mat-toolbar>
