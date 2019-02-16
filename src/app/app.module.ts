@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconRegistry, MatToolbarModule, MatButtonModule, MatTooltipModule, MatIconModule } from '@angular/material';
+import { MatIconRegistry, MatToolbarModule, MatButtonModule, MatTooltipModule, MatIconModule, MatListModule, MatDivider, MatDividerModule } from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -27,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
