@@ -1,34 +1,32 @@
 <h1>Showing recipes for {{ persona.name }}</h1>
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
-    <!-- Cost column -->
-    <ng-container matColumnDef="cost">
-      <th mat-header-cell *matHeaderCellDef>Cost</th>
-      <td mat-cell *matCellDef="let element">{{ element.cost }}</td>
-    </ng-container>
+<table mat-table [dataSource]="dataSource">
+  <!-- Cost column -->
+  <ng-container matColumnDef="cost">
+    <th mat-header-cell *matHeaderCellDef>Cost</th>
+    <td mat-cell *matCellDef="let element">{{ element.cost }}</td>
+  </ng-container>
 
-    <!-- Ingredients column -->
-    <ng-container matColumnDef="personae">
-      <th mat-header-cell *matHeaderCellDef>Ingredients</th>
-      <td mat-cell *matCellDef="let element">
-        <div
-          [ngStyle]="{ display: 'inline' }"
-          *ngFor="let persona of element.personae"
-        >
-          <b [ngStyle]="{ cursor: 'pointer' }" (click)="go(persona.name)">{{
-            persona.name
-          }}</b>
-          ({{ persona.level }}/{{ persona.arcana }})
-        </div>
-      </td>
-    </ng-container>
+  <!-- Ingredients column -->
+  <ng-container matColumnDef="personae">
+    <th mat-header-cell *matHeaderCellDef>Ingredients</th>
+    <td mat-cell *matCellDef="let element">
+      <div
+        [ngStyle]="{ display: 'inline' }"
+        *ngFor="let persona of element.personae"
+      >
+        <b [ngStyle]="{ cursor: 'pointer', color: '#3f51b5' }" (click)="go(persona.name)">{{
+          persona.name
+        }}</b>
+        ({{ persona.level }}/{{ persona.arcana }})
+      </div>
+    </td>
+  </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
 
-  <mat-paginator
-    [pageSizeOptions]="[10, 20, 50, 100]"
-    showFirstLastButtons
-  ></mat-paginator>
-</div>
+<mat-paginator
+  [pageSizeOptions]="[10, 20, 50, 100]"
+  showFirstLastButtons
+></mat-paginator>
