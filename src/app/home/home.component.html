@@ -1,4 +1,4 @@
-<form>
+<form @fadeInOut>
   <mat-form-field>
     <input
       matInput
@@ -14,13 +14,13 @@
     matSuffix
     mat-icon-button
     aria-label="Clear"
-    (click)="name = '';applyFilter('');"
+    (click)="name = ''; applyFilter('')"
   >
     <mat-icon svgIcon="close"></mat-icon>
   </button>
 </form>
 
-<table mat-table [dataSource]="dataSource">
+<table @fadeInOut mat-table [dataSource]="dataSource">
   <!-- Level column -->
   <ng-container matColumnDef="level">
     <th mat-header-cell *matHeaderCellDef>Level</th>
@@ -51,6 +51,7 @@
 </table>
 
 <mat-paginator
+  @fadeInOut
   [pageSizeOptions]="[10, 20, 50, 100]"
   showFirstLastButtons
 ></mat-paginator>

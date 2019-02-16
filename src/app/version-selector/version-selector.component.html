@@ -4,6 +4,7 @@
   <mat-card-content
     ><mat-list>
       <div
+        @fadeInOut
         *ngFor="
           let release of dataService.releases;
           let i = index;

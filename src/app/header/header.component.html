@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <div matTooltip="">
+  <div>
     {{
       dataService.currentRelease
         ? router.url !== '/'
@@ -8,7 +8,9 @@
         : 'Persona Fusion Calculator'
     }}
   </div>
+  <div [ngStyle]="{ margin: '0 auto' }"></div>
   <button
+    @fadeInOut
     mat-icon-button
     mat-raised-button
     routerLink="/"
@@ -18,6 +20,7 @@
     <mat-icon svgIcon="home"></mat-icon>
   </button>
   <button
+    @fadeInOut
     mat-icon-button
     mat-raised-button
     (click)="location.back()"
@@ -26,6 +29,7 @@
     <mat-icon svgIcon="navigate_before"></mat-icon>
   </button>
   <button
+    @fadeInOut
     mat-icon-button
     mat-raised-button
     (click)="location.forward()"

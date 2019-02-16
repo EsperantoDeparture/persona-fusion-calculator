@@ -5,11 +5,31 @@ import { Recipe } from '../models/recipe.model';
 import { Combo } from '../models/combo.model';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { DataService } from '../data/data.service';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.scss']
+  styleUrls: ['./recipes.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          opacity: 0,
+          height: '0px',
+          display: 'none'
+        })
+      ),
+      transition('void <=> *', animate(500))
+    ])
+  ]
 })
 export class RecipesComponent implements OnInit {
   persona: Persona;

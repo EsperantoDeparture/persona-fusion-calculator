@@ -1,5 +1,5 @@
-<h1>Showing recipes for {{ persona.name }}</h1>
-<table mat-table [dataSource]="dataSource">
+<h1 @fadeInOut>Showing recipes for {{ persona.name }}</h1>
+<table @fadeInOut mat-table [dataSource]="dataSource">
   <!-- Cost column -->
   <ng-container matColumnDef="cost">
     <th mat-header-cell *matHeaderCellDef>Cost</th>
@@ -14,9 +14,11 @@
         [ngStyle]="{ display: 'inline' }"
         *ngFor="let persona of element.personae"
       >
-        <b [ngStyle]="{ cursor: 'pointer', color: '#3f51b5' }" (click)="go(persona.name)">{{
-          persona.name
-        }}</b>
+        <b
+          [ngStyle]="{ cursor: 'pointer', color: '#3f51b5' }"
+          (click)="go(persona.name)"
+          >{{ persona.name }}</b
+        >
         ({{ persona.level }}/{{ persona.arcana }})
       </div>
     </td>
