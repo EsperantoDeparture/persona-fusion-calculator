@@ -32,6 +32,7 @@ export class RecipesComponent implements OnInit {
   specialCombos: Combo[] = specialCombos;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.recipes = [];
     for (const persona of this.personae) {
       if (!this.personaeByArcana[persona.arcana]) {
         this.personaeByArcana[persona.arcana] = [];
@@ -54,6 +55,7 @@ export class RecipesComponent implements OnInit {
       this.persona = this.personae.find(
         persona => persona.name === params['persona']
       );
+      this.recipes = [];
       this.getRecipes();
       this.recipes = this.recipes.sort((a: Recipe, b: Recipe) => {
         if (a.cost < b.cost) {
@@ -306,7 +308,6 @@ export class RecipesComponent implements OnInit {
   }
 
   go(persona: string) {
-    this.recipes = [];
     this.router.navigate(['/recipes'], {
       queryParams: {
         persona: persona
