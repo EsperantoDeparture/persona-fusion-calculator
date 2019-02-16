@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'persona4-golden-fusion-calculator'`, () => {
+  it(`should have as title 'persona-fusion-calculator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('persona4-golden-fusion-calculator');
+    expect(app.title).toEqual('persona-fusion-calculator');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to persona4-golden-fusion-calculator!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to persona-fusion-calculator!');
   });
 });

@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to persona4-golden-fusion-calculator!');
+    expect(page.getTitleText()).toEqual('Welcome to persona-fusion-calculator!');
   });
 });
