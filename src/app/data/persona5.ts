@@ -44,7 +44,7 @@ export const personae = [
   { arcana: 'Emperor', level: 66, name: 'Oberon' },
   { arcana: 'Emperor', level: 75, name: 'Baal' },
   { arcana: 'Emperor', level: 82, name: 'Odin', max: true },
-  { arcana: 'Empress', level: 15, name: "Queen's Necklace" },
+  { arcana: 'Empress', level: 15, name: 'Queen\'s Necklace' },
   { arcana: 'Empress', level: 20, name: 'Yaksini' },
   { arcana: 'Empress', level: 26, name: 'Lamia' },
   { arcana: 'Empress', level: 40, name: 'Hariti' },
@@ -83,7 +83,7 @@ export const personae = [
   { arcana: 'Hanged Man', level: 14, name: 'Inugami' },
   { arcana: 'Hanged Man', level: 21, name: 'Orthrus' },
   { arcana: 'Hanged Man', level: 29, name: 'Take-Minakata' },
-  { arcana: 'Hanged Man', level: 35, name: "Emperor's Amulet" },
+  { arcana: 'Hanged Man', level: 35, name: 'Emperor\'s Amulet' },
   { arcana: 'Hanged Man', level: 42, name: 'Hecatoncheires' },
   { arcana: 'Hanged Man', level: 60, name: 'Moloch' },
   { arcana: 'Hanged Man', level: 68, name: 'Vasuki', special: true },
@@ -134,7 +134,7 @@ export const personae = [
   { arcana: 'Lovers', level: 56, name: 'Parvati' },
   { arcana: 'Lovers', level: 78, name: 'Raphael' },
   { arcana: 'Lovers', level: 85, name: 'Ishtar', max: true },
-  { arcana: 'Magician', level: 2, name: "Jack-o'-Lantern" },
+  { arcana: 'Magician', level: 2, name: 'Jack-o\'-Lantern' },
   { arcana: 'Magician', level: 11, name: 'Jack Frost' },
   { arcana: 'Magician', level: 17, name: 'Nekomata' },
   { arcana: 'Magician', level: 24, name: 'Sandman' },
@@ -456,7 +456,7 @@ export const specialCombos = [
   },
   {
     result: 'Black Frost',
-    sources: ["Jack O'Lantern", 'Jack Frost', 'King Frost']
+    sources: ['Jack O\'Lantern', 'Jack Frost', 'King Frost']
   },
   { result: 'Bugs', sources: ['Pixie', 'Pisaca', 'Hariti'] },
   {
