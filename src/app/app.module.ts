@@ -7,9 +7,18 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconRegistry, MatToolbarModule, MatButtonModule, MatTooltipModule, MatIconModule, MatListModule, MatDivider, MatDividerModule } from '@angular/material';
+import {
+  MatIconRegistry,
+  MatToolbarModule,
+  MatButtonModule,
+  MatTooltipModule,
+  MatIconModule,
+  MatDividerModule,
+  MatInputModule
+} from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +26,12 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     NotFoundComponent,
-    RecipesComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
@@ -28,8 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTooltipModule,
     MatIconModule,
     HttpClientModule,
-    MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
