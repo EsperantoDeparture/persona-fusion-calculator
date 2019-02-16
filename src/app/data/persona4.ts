@@ -643,28 +643,28 @@ export const arcana3Combos = [
 ];
 
 export const specialCombos = [
-  { result: 'Izanagi', sources: ['Yomotsu-Shikome', 'Obariyon'] },
+  { result: 'Izanagi', source: ['Yomotsu-Shikome', 'Obariyon'] },
   {
     result: 'Black Frost',
-    sources: ['Jack Frost', 'Pyro Jack', 'King Frost', 'Pixie', 'Ghoul']
+    source: ['Jack Frost', 'Pyro Jack', 'King Frost', 'Pixie', 'Ghoul']
   },
-  { result: 'Pixie', sources: ['Orobas', 'Jack Frost'] },
-  { result: 'Kohryu', sources: ['Genbu', 'Seiryu', 'Suzaku', 'Byakko'] },
-  { result: 'Slime', sources: ['Eligor', 'Nata Taishi'] },
+  { result: 'Pixie', source: ['Orobas', 'Jack Frost'] },
+  { result: 'Kohryu', source: ['Genbu', 'Seiryu', 'Suzaku', 'Byakko'] },
+  { result: 'Slime', source: ['Eligor', 'Nata Taishi'] },
   {
     result: 'Futsunushi',
-    sources: ['Ares', 'Triglav', 'Kin-ki', 'Atavaka', 'Neko Shogun']
+    source: ['Ares', 'Triglav', 'Kin-ki', 'Atavaka', 'Neko Shogun']
   },
-  { result: 'Ongyo-ki', sources: ['Oni', 'Fuu-ki', 'Kin-ki', 'Sui-ki'] },
-  { result: 'Norn', sources: ['Atropos', 'Lachesis', 'Clotho'] },
+  { result: 'Ongyo-ki', source: ['Oni', 'Fuu-ki', 'Kin-ki', 'Sui-ki'] },
+  { result: 'Norn', source: ['Atropos', 'Lachesis', 'Clotho'] },
   {
     result: 'Yatsufusa',
-    sources: ['Makami', 'Orthrus', 'Mothman', 'Thoth', 'Narasimha']
+    source: ['Makami', 'Orthrus', 'Mothman', 'Thoth', 'Narasimha']
   },
-  { result: 'Alice', sources: ['Nebiros', 'Belial'] },
+  { result: 'Alice', source: ['Nebiros', 'Belial'] },
   {
     result: 'Mahakala',
-    sources: [
+    source: [
       'Matador',
       'White Rider',
       'Mother Harlot',
@@ -673,14 +673,14 @@ export const specialCombos = [
       'Trumpeter'
     ]
   },
-  { result: 'Ukobach', sources: ['Lilim', 'Vetala'] },
+  { result: 'Ukobach', source: ['Lilim', 'Vetala'] },
   {
     result: 'Beelzebub',
-    sources: ['Pazuzu', 'Belphegor', 'Belial', 'Mot', 'Seth', 'Baal Zebul']
+    source: ['Pazuzu', 'Belphegor', 'Belial', 'Mot', 'Seth', 'Baal Zebul']
   },
   {
     result: 'Yoshitsune',
-    sources: [
+    source: [
       'Masakado',
       'Shiki-Ouji',
       'Oukuninushi',
@@ -688,18 +688,18 @@ export const specialCombos = [
       'Hitokoto-Nushi'
     ]
   },
-  { result: 'Shiva', sources: ['Rangda', 'Barong'] },
+  { result: 'Shiva', source: ['Rangda', 'Barong'] },
   {
     result: 'Neko Shogun',
-    sources: ['Saki Mitama', 'Ara Mitama', 'Kusi Mitama', 'Nigi Mitama']
+    source: ['Saki Mitama', 'Ara Mitama', 'Kusi Mitama', 'Nigi Mitama']
   },
   {
     result: 'Tam Lin',
-    sources: ['Phoenix', 'Gdon', 'Yatagarasu', 'Narasimha']
+    source: ['Phoenix', 'Gdon', 'Yatagarasu', 'Narasimha']
   },
   {
     result: 'Trumpeter',
-    sources: [
+    source: [
       'Matador',
       'White Rider',
       'Daisoujou',
@@ -708,14 +708,14 @@ export const specialCombos = [
       'Taowu'
     ]
   },
-  { result: 'Ardha', sources: ['Parvati', 'Shiva'] },
+  { result: 'Ardha', source: ['Parvati', 'Shiva'] },
   {
     result: 'Lucifer',
-    sources: ['Ananta', 'Anubis', 'Trumpeter', 'Michael', 'Satan', 'Metatron']
+    source: ['Ananta', 'Anubis', 'Trumpeter', 'Michael', 'Satan', 'Metatron']
   },
   {
     result: 'Izanagi-no-Okami',
-    sources: [
+    source: [
       'Izanagi',
       'Sandman',
       'Nata Taishi',

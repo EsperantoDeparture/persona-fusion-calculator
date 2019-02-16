@@ -647,14 +647,14 @@ export const arcana3Combos = [
 ];
 
 export const specialCombos = [
-  { result: 'Alice', sources: ['Pixie', 'Lilim', 'Narcissus', 'Nata Taishi'] },
+  { result: 'Alice', source: ['Pixie', 'Lilim', 'Narcissus', 'Nata Taishi'] },
   {
     result: 'Arahabaki',
-    sources: ['Omoikane', 'Take-minakata', 'Okuninushi', 'Kikuri-hime']
+    source: ['Omoikane', 'Take-minakata', 'Okuninushi', 'Kikuri-hime']
   },
   {
     result: 'Asura',
-    sources: [
+    source: [
       'Yatagarasu',
       'Quetzalcoatl',
       'Jatayu',
@@ -665,11 +665,11 @@ export const specialCombos = [
   },
   {
     result: 'Attis',
-    sources: ['Inugami', 'Take-minakata', 'Orthrus', 'Vasuki', 'Ubelluris']
+    source: ['Inugami', 'Take-minakata', 'Orthrus', 'Vasuki', 'Ubelluris']
   },
   {
     result: 'Beelzebub',
-    sources: [
+    source: [
       'Incubus',
       'Succubus',
       'Pazuzu',
@@ -680,11 +680,11 @@ export const specialCombos = [
   },
   {
     result: 'Black Frost',
-    sources: ['Jack Frost', 'Pyro Jack', 'King Frost', 'Queen Mab']
+    source: ['Jack Frost', 'Pyro Jack', 'King Frost', 'Queen Mab']
   },
   {
     result: 'Daisoujou',
-    sources: [
+    source: [
       'Mithra',
       'Ara Mitama',
       'Nigi Mitama',
@@ -692,40 +692,40 @@ export const specialCombos = [
       'Saki Mitama'
     ]
   },
-  { result: 'Girimehkala', sources: ['Gurr', 'Vetala', 'Taraka', 'Rangda'] },
-  { result: 'Kohryu', sources: ['Genbu', 'Seiryuu', 'Suzaku', 'Byakko'] },
-  { result: 'Lilith', sources: ['Lilim', 'Vetala', 'Incubus', 'Succubus'] },
+  { result: 'Girimehkala', source: ['Gurr', 'Vetala', 'Taraka', 'Rangda'] },
+  { result: 'Kohryu', source: ['Genbu', 'Seiryuu', 'Suzaku', 'Byakko'] },
+  { result: 'Lilith', source: ['Lilim', 'Vetala', 'Incubus', 'Succubus'] },
   {
     result: 'Lucifer',
-    sources: ['Samael', 'Abaddon', 'Beelzebub', 'Satan', 'Helel']
+    source: ['Samael', 'Abaddon', 'Beelzebub', 'Satan', 'Helel']
   },
   {
     result: 'Mara',
-    sources: ['Incubus', 'Pazuzu', 'Mot', 'Kumbhanda', 'Attis']
+    source: ['Incubus', 'Pazuzu', 'Mot', 'Kumbhanda', 'Attis']
   },
   {
     result: 'Masakado',
-    sources: ['Zouchouten', 'Jikokuten', 'Koumokuten', 'Bishamonten']
+    source: ['Zouchouten', 'Jikokuten', 'Koumokuten', 'Bishamonten']
   },
-  { result: 'Messiah', sources: ['Orpheus', 'Thanatos'] },
-  { result: 'Metatron', sources: ['Uriel', 'Raphael', 'Gabriel', 'Michael'] },
-  { result: 'Norn', sources: ['Clotho', 'Lachesis', 'Atropos'] },
-  { result: 'Orpheus', sources: ['Slime', 'Legion'] },
+  { result: 'Messiah', source: ['Orpheus', 'Thanatos'] },
+  { result: 'Metatron', source: ['Uriel', 'Raphael', 'Gabriel', 'Michael'] },
+  { result: 'Norn', source: ['Clotho', 'Lachesis', 'Atropos'] },
+  { result: 'Orpheus', source: ['Slime', 'Legion'] },
   {
     result: 'Orpheus Telos',
-    sources: ['Thanatos', 'Chi You', 'Helel', 'Asura', 'Messiah', 'Metatron']
+    source: ['Thanatos', 'Chi You', 'Helel', 'Asura', 'Messiah', 'Metatron']
   },
   {
     result: 'Sandalphon',
-    sources: ['Gurr', 'Suzaku', 'Yatagarasu', 'Horus', 'Garuda']
+    source: ['Gurr', 'Suzaku', 'Yatagarasu', 'Horus', 'Garuda']
   },
-  { result: 'Shiva', sources: ['Barong', 'Rangda'] },
+  { result: 'Shiva', source: ['Barong', 'Rangda'] },
   {
     result: 'Susano-o',
-    sources: ['Orpheus', 'Legion', 'Black Frost', 'Ose', 'Decarabia', 'Loki']
+    source: ['Orpheus', 'Legion', 'Black Frost', 'Ose', 'Decarabia', 'Loki']
   },
   {
     result: 'Thanatos',
-    sources: ['Ghoul', 'Pale Rider', 'Loa', 'Samael', 'Mot', 'Alice']
+    source: ['Ghoul', 'Pale Rider', 'Loa', 'Samael', 'Mot', 'Alice']
   }
 ];

@@ -101,7 +101,7 @@ export class DataService {
     }
   }
 
-  getSpecialComos() {
+  getSpecialCombos() {
     switch (this.currentRelease) {
       case 'Persona3: FES':
         return specialCombos3fes;

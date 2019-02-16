@@ -1,15 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  personae,
-  arcana2Combos,
-  arcana3Combos,
-  specialCombos
-} from '../data/persona4-golden';
 import { Persona } from '../models/persona.model';
 import { Recipe } from '../models/recipe.model';
 import { Combo } from '../models/combo.model';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { DataService } from '../data/data.service';
 
 @Component({
   selector: 'app-recipes',
@@ -18,7 +13,7 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 })
 export class RecipesComponent implements OnInit {
   persona: Persona;
-  personae: Persona[] = personae;
+  personae: Persona[] = this.dataService.getPersonae();
   personaeByName = this.personae.map(persona => {
     const obj = {};
     obj[`${persona.name}`] = persona;
@@ -28,16 +23,16 @@ export class RecipesComponent implements OnInit {
   arcanaRank: any = {};
   recipes: Recipe[] = [];
   maxCost = 0;
-  arcana2Combos: Combo[] = arcana2Combos;
-  arcana3Combos: Combo[] = arcana3Combos;
-  specialCombos: Combo[] = specialCombos;
+  arcana2Combos: Combo[] = this.dataService.getArcana2Combos();
+  arcana3Combos: Combo[] = this.dataService.getArcana3Combos();
+  specialCombos: Combo[] = this.dataService.getSpecialCombos();
 
   displayedColumns = ['cost', 'personae'];
 
   dataSource: MatTableDataSource<Recipe>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataService: DataService) {
     this.recipes = [];
     for (const persona of this.personae) {
       if (!this.personaeByArcana[persona.arcana]) {

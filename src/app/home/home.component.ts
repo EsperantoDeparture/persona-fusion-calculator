@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { personae } from '../data/persona4-golden';
 import { Persona } from '../models/persona.model';
 import {
   animate,
@@ -9,6 +8,7 @@ import {
   trigger
 } from '@angular/animations';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { DataService } from '../data/data.service';
 
 @Component({
   selector: 'app-home',
@@ -29,11 +29,11 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
   ]
 })
 export class HomeComponent implements OnInit {
-  dataSource = new MatTableDataSource<Persona>(personae);
+  dataSource = new MatTableDataSource<Persona>(this.dataService.getPersonae());
   @ViewChild(MatPaginator) paginator: MatPaginator;
   displayedColumns = ['level', 'name', 'arcana'];
   name = '';
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;

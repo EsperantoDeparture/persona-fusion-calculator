@@ -448,20 +448,20 @@ export const arcana2Combos = [
 export const arcana3Combos = [];
 
 export const specialCombos = [
-  { result: 'Alice', sources: ['Nebiros', 'Belial'] },
-  { result: 'Ardha', sources: ['Parvati', 'Shiva'] },
+  { result: 'Alice', source: ['Nebiros', 'Belial'] },
+  { result: 'Ardha', source: ['Parvati', 'Shiva'] },
   {
     result: 'Asura-Ou',
-    sources: ['Zouchouten', 'Jikokuten', 'Koumokuten', 'Bishamonten']
+    source: ['Zouchouten', 'Jikokuten', 'Koumokuten', 'Bishamonten']
   },
   {
     result: 'Black Frost',
-    sources: ['Jack O\'Lantern', 'Jack Frost', 'King Frost']
+    source: ['Jack O\'Lantern', 'Jack Frost', 'King Frost']
   },
-  { result: 'Bugs', sources: ['Pixie', 'Pisaca', 'Hariti'] },
+  { result: 'Bugs', source: ['Pixie', 'Pisaca', 'Hariti'] },
   {
     result: 'Chi You',
-    sources: [
+    source: [
       'Hecatoncheires',
       'White Rider',
       'Thor',
@@ -469,15 +469,15 @@ export const specialCombos = [
       'Cu Chulainn'
     ]
   },
-  { result: 'Flauros', sources: ['Berith', 'Andras', 'Eligor'] },
-  { result: 'Kohryu', sources: ['Genbu', 'Seiryu', 'Suzaku', 'Byakko'] },
+  { result: 'Flauros', source: ['Berith', 'Andras', 'Eligor'] },
+  { result: 'Kohryu', source: ['Genbu', 'Seiryu', 'Suzaku', 'Byakko'] },
   {
     result: 'Lucifer',
-    sources: ['Anubis', 'Ananta', 'Trumpeter', 'Michael', 'Metatron', 'Satan']
+    source: ['Anubis', 'Ananta', 'Trumpeter', 'Michael', 'Metatron', 'Satan']
   },
   {
     result: 'Metatron',
-    sources: [
+    source: [
       'Principality',
       'Power',
       'Dominion',
@@ -486,28 +486,28 @@ export const specialCombos = [
       'Michael'
     ]
   },
-  { result: 'Michael', sources: ['Raphael', 'Gabriel', 'Uriel'] },
-  { result: 'Neko Shogun', sources: ['Kodama', 'Sudama', 'Anzu'] },
-  { result: 'Ongyo-Ki', sources: ['Kin-Ki', 'Sui-Ki', 'Fuu-Ki'] },
+  { result: 'Michael', source: ['Raphael', 'Gabriel', 'Uriel'] },
+  { result: 'Neko Shogun', source: ['Kodama', 'Sudama', 'Anzu'] },
+  { result: 'Ongyo-Ki', source: ['Kin-Ki', 'Sui-Ki', 'Fuu-Ki'] },
   {
     result: 'Satanael',
-    sources: ['Arsene', 'Anzu', 'Ishtar', 'Satan', 'Lucifer', 'Michael']
+    source: ['Arsene', 'Anzu', 'Ishtar', 'Satan', 'Lucifer', 'Michael']
   },
-  { result: 'Seth', sources: ['Isis', 'Thoth', 'Anubis', 'Horus'] },
-  { result: 'Shiva', sources: ['Rangda', 'Barong'] },
+  { result: 'Seth', source: ['Isis', 'Thoth', 'Anubis', 'Horus'] },
+  { result: 'Shiva', source: ['Rangda', 'Barong'] },
   {
     result: 'Sraosha',
-    sources: ['Mithra', 'Mithras', 'Melchizedek', 'Lilith', 'Gabriel']
+    source: ['Mithra', 'Mithras', 'Melchizedek', 'Lilith', 'Gabriel']
   },
-  { result: 'Throne', sources: ['Power', 'Melchizedek', 'Dominion'] },
+  { result: 'Throne', source: ['Power', 'Melchizedek', 'Dominion'] },
   {
     result: 'Trumpeter',
-    sources: ['White Rider', 'Red Rider', 'Black Rider', 'Pale Rider']
+    source: ['White Rider', 'Red Rider', 'Black Rider', 'Pale Rider']
   },
-  { result: 'Vasuki', sources: ['Naga', 'Raja Naga', 'Ananta'] },
+  { result: 'Vasuki', source: ['Naga', 'Raja Naga', 'Ananta'] },
   {
     result: 'Yoshitsune',
-    sources: [
+    source: [
       'Okuninushi',
       'Shiki-Ouji',
       'Arahabaki',
