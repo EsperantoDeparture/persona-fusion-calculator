@@ -1,6 +1,6 @@
 <h1 @fadeInOut>Showing recipes for {{ persona.name }}</h1>
 
-<form>
+<form @fadeInOut>
   <mat-form-field class="chip-list">
     <mat-chip-list #chipList>
       <mat-chip
@@ -41,7 +41,7 @@
   <!-- Cost column -->
   <ng-container matColumnDef="cost">
     <th mat-header-cell *matHeaderCellDef>Cost</th>
-    <td mat-cell *matCellDef="let element">{{ element.cost }} ¥</td>
+    <td mat-cell *matCellDef="let element">{{ element.cost }}¥</td>
   </ng-container>
 
   <!-- Ingredients column -->
