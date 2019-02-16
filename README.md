@@ -1,5 +1,9 @@
 # Persona4GoldenFusionCalculator
 
+
+This project was based on [https://github.com/arantius/persona-fusion-calculator](arantius' persona fusion calculator). I was
+bored and wrote this with the new Angular.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
