@@ -29,7 +29,6 @@ import {
   arcana3Combos as arcana3Combos5,
   specialCombos as specialCombos5
 } from '../data/persona5';
-import { Persona } from '../models/persona.model';
 import { StorageService } from '../storage/storage.service';
 
 @Injectable({
