@@ -1,3 +1,17 @@
-<p>
-  recipes works!
-</p>
+<h1>Showing recipes for {{ persona.name }}</h1>
+<table class="table">
+  <tr>
+    <th>Cost</th>
+    <th>Ingredients</th>
+  </tr>
+  <tr class="recipe" *ngFor="let recipe of recipes">
+    <td>
+      {{ recipe.cost }}¥
+    </td>
+    <td>
+      <div [ngStyle]="{display: 'inline'}" *ngFor="let persona of recipe.personae">
+        <b>{{ persona.name }}</b> ({{ persona.level }}/{{ persona.arcana }})
+      </div>
+    </td>
+  </tr>
+</table>
