@@ -1,4 +1,4 @@
-# Persona4GoldenFusionCalculator
+# Persona fusion calculator
 
 
 This project was based on [https://github.com/arantius/persona-fusion-calculator](arantius' persona fusion calculator). I was
