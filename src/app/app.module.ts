@@ -14,7 +14,9 @@ import {
   MatTooltipModule,
   MatIconModule,
   MatDividerModule,
-  MatInputModule
+  MatInputModule,
+  MatTableModule,
+  MatPaginatorModule
 } from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -40,7 +42,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     HttpClientModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
   personae,
@@ -9,6 +9,7 @@ import {
 import { Persona } from '../models/persona.model';
 import { Recipe } from '../models/recipe.model';
 import { Combo } from '../models/combo.model';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-recipes',
@@ -30,6 +31,11 @@ export class RecipesComponent implements OnInit {
   arcana2Combos: Combo[] = arcana2Combos;
   arcana3Combos: Combo[] = arcana3Combos;
   specialCombos: Combo[] = specialCombos;
+
+  displayedColumns = ['cost', 'personae'];
+
+  dataSource: MatTableDataSource<Recipe>;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.recipes = [];
@@ -66,6 +72,8 @@ export class RecipesComponent implements OnInit {
         }
         return 0;
       });
+      this.dataSource = new MatTableDataSource<Recipe>(this.recipes);
+      this.dataSource.paginator = this.paginator;
     });
   }
 
