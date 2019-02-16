@@ -1,20 +1,24 @@
-<mat-card>
-  <mat-card-title><h1>Select your game</h1></mat-card-title>
+<div class="grand-parent-container">
+  <div class="parent-container">
+    <mat-card>
+      <mat-card-title><h1>Select your game</h1></mat-card-title>
 
-  <mat-card-content
-    ><mat-list>
-      <div
-        @fadeInOut
-        *ngFor="
-          let release of dataService.releases;
-          let i = index;
-          let c = count
-        "
-      >
-        <mat-list-item (click)="dataService.selectRelease(release)">
-          {{ release }}
-        </mat-list-item>
-        <mat-divider *ngIf="c - 1 > i"></mat-divider>
-      </div> </mat-list
-  ></mat-card-content>
-</mat-card>
+      <mat-card-content
+        ><mat-list>
+          <div
+            @fadeInOut
+            *ngFor="
+              let release of dataService.releases;
+              let i = index;
+              let c = count
+            "
+          >
+            <mat-list-item (click)="dataService.selectRelease(release)">
+              {{ release }}
+            </mat-list-item>
+            <mat-divider *ngIf="c - 1 > i"></mat-divider>
+          </div> </mat-list
+      ></mat-card-content>
+    </mat-card>
+  </div>
+</div>
