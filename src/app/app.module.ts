@@ -20,7 +20,8 @@ import {
   MatListModule,
   MatCardModule,
   MatAutocompleteModule,
-  MatChipsModule
+  MatChipsModule,
+  MatSortModule
 } from '@angular/material';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -55,7 +56,8 @@ import { VersionSelectorComponent } from './version-selector/version-selector.co
     MatDividerModule,
     MatCardModule,
     MatAutocompleteModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

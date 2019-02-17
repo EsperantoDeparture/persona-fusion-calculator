@@ -7,7 +7,7 @@ import {
   transition,
   trigger
 } from '@angular/animations';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { DataService } from '../data/data.service';
 
 @Component({
@@ -31,12 +31,14 @@ import { DataService } from '../data/data.service';
 export class HomeComponent implements OnInit {
   dataSource = new MatTableDataSource<Persona>(this.dataService.getPersonae());
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   displayedColumns = ['level', 'name', 'arcana'];
   name = '';
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(filterValue: string) {
