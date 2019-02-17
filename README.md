@@ -11,6 +11,8 @@ npm install -g @angular/cli@7.2.4
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+**Remember to build the dependencies first, running `npm install` in the root of the project.**
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
