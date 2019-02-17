@@ -8,7 +8,8 @@ import {
   MatPaginator,
   MatAutocomplete,
   MatChipInputEvent,
-  MatAutocompleteSelectedEvent
+  MatAutocompleteSelectedEvent,
+  MatSort
 } from '@angular/material';
 import { DataService } from '../data/data.service';
 import {
@@ -70,6 +71,7 @@ export class RecipesComponent implements OnInit {
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -118,6 +120,7 @@ export class RecipesComponent implements OnInit {
       });
       this.dataSource = new MatTableDataSource<Recipe>(this.recipes);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 

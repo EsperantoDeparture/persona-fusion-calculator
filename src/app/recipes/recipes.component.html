@@ -37,10 +37,10 @@
   </mat-form-field>
 </form>
 
-<table @fadeInOut mat-table [dataSource]="dataSource">
+<table @fadeInOut mat-table [dataSource]="dataSource" matSort>
   <!-- Cost column -->
   <ng-container matColumnDef="cost">
-    <th mat-header-cell *matHeaderCellDef>Cost</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost</th>
     <td mat-cell *matCellDef="let element">{{ element.cost }}¥</td>
   </ng-container>
 
